@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>ch.cmbntr</groupId>
+    <artifactId>cmbntr-oss-parent</artifactId>
+    <version>1</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>ten</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+
+  <packaging>pom</packaging>
+
+  <name>cmbntr's ten</name>
+  <description>complementary java libraries</description>
+
+  <licenses>
+    <license>
+      <name>Eclipse Public License 1.0</name>
+      <url>http://opensource.org/licenses/eclipse-1.0.php</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/cmbntr/ten</url>
+    <connection>scm:git:git@github.com:cmbntr/ten.git</connection>
+    <developerConnection>scm:git:git@github.com:cmbntr/ten.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>2.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+	<groupId>org.clojure</groupId>
+	<artifactId>clojure</artifactId>
+	<version>1.5.1</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>14.0.1</version>
+      </dependency>
+      <dependency>
+	<groupId>com.google.code.findbugs</groupId>
+	<artifactId>jsr305</artifactId>
+	<version>2.0.1</version>
+      </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit-dep</artifactId>
+        <version>4.11</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit-dep</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <developers>
+    <developer>
+      <id>cmbntr</id>
+      <name>Michael Locher</name>
+      <email>cmbntr@gmail.com</email>
+      <timezone>1</timezone>
+      <roles>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <modules>
+    <module>ten-data</module>
+  </modules>
+
+  <properties>
+    <source.version>1.6</source.version>
+    <target.version>1.6</target.version>
+  </properties>
+
+</project>
