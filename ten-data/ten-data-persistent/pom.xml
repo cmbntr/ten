@@ -50,8 +50,7 @@
                 <filter>
                   <artifact>org.clojure:clojure</artifact>
                   <excludes>
-                    <exclude>**/*.clj*</exclude>
-                    <exclude>clojure/*</exclude>
+                    <exclude>**/*.clj</exclude>
                     <exclude>META-INF/**</exclude>
                   </excludes>
                 </filter>
@@ -59,7 +58,7 @@
               <relocations>
                 <relocation>
                   <pattern>clojure</pattern>
-                  <shadedPattern>ch.cmbntr.ten.data.persistent.clj</shadedPattern>
+                  <shadedPattern>ch.cmbntr.ten.data.persistent.internal</shadedPattern>
                 </relocation>
               </relocations>
             </configuration>
